@@ -1103,7 +1103,7 @@ namespace nanoFramework.Tools.Debugger
         private async Task<IncomingMessage> MessageAsync(uint command, uint flags, object payload, int timeout)
         {
             // FIXME
-            // Lock on m_ReqSyncLock object, so only one thread is active inside the block.
+            // Lock on m_ReqSyncLock object, so only one thread is active inside esp32 block.
             //lock (m_ReqSyncLock)
             //{
             WireProtocolRequest req = await AsyncMessage(command, flags, payload, timeout);
